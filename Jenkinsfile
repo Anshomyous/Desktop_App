@@ -5,7 +5,7 @@ pipeline{
         stage("Build"){
             steps{
                 dir ("demo"){
-                    bat 'mvn clean install'
+                    bat 'mvn clean package'
                 }
             }
         }
