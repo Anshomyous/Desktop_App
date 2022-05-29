@@ -25,6 +25,11 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+    <groupId>com.akathist.maven.plugins.launch4j</groupId>
+    <artifactId>launch4j-maven-plugin</artifactId>
+    <version>1.7.25</version>
+</dependency>
   </dependencies>
 
  <build>
@@ -62,7 +67,7 @@
             </configuration>
         </plugin>
         <plugin>
-            <groupId>com.akathist.maven.plugins.launch4j</groupId>
+           <groupId>com.akathist.maven.plugins.launch4j</groupId>
             <artifactId>launch4j-maven-plugin</artifactId>
             <version>1.7.25</version>
             <executions>
