@@ -34,6 +34,7 @@
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="maven.repo.local" value="C:\Users\sohamr\.m2\repository"/>
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.8.3-bin\apache-maven-3.8.3\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\sohamr"/>
@@ -45,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.3-bin\apache-maven-3.8.3\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.repo.local=C:\Users\sohamr\.m2\repository clean install"/>
     <property name="java.home" value="C:\Program Files\Amazon Corretto\jdk11.0.12_7"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
