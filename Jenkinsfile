@@ -12,7 +12,7 @@ pipeline{
             steps{
                 withEnv(['SONAR_TOKEN=507bb5c61112808b89e983febba12c84f44c97f9']){
                     dir("demo"){
-                        bat  'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Anshomyous_Desktop_App'
+                        bat  'mvn -Dmaven.repo.local=C:\\Users\\sohamr\\.m2\\repository verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Anshomyous_Desktop_App'
                     }
                 }
             }
