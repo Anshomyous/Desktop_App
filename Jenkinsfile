@@ -10,7 +10,9 @@ pipeline{
         }
         stage("Static Code Analysis"){
             steps{
-                echo "WILL CODE SOON"
+                withSonarQubeEnv(credentialsId: 'Sonarcloud-Jenkins') {
+                    mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Anshomyous_Desktop_App
+                }
             }
         }
         stage("Build"){
@@ -28,7 +30,7 @@ pipeline{
 		stage("App Packaging"){
             steps{
                 bat '''
-                    "C:\\Program Files (x86)\\VB6VirtualRegistry\\Vb6VirtualRegistry.exe"  pack "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\msix_files" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\myjava.msix"
+                    "C:\\Program Files (x86)\\VB6VirtualRegistry\\Vb6VirtualRegistry.exe"  pack "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\msix_files" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\myapp.msix"
                     '''
             }
         }
