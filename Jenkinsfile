@@ -2,7 +2,7 @@ pipeline{
     agent any 
 
     stages{
-        stage{"Pre-Build Notification"}{
+        stage("Pre-Build Notification"){
             steps{
                 echo "WILL CODE SOON"
             }
