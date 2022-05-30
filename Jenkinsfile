@@ -3,11 +3,15 @@ pipeline{
 
     stages{
         stage{"Pre-Build Notification"}{
-            // Code here
-            echo 'CODE IS COMING SOON'
+            steps{
+                echo "WILL CODE SOON"
+            }
+            
         }
         stage("Static Code Analysis"){
-            // Code here
+            steps{
+                echo "WILL CODE SOON"
+            }
         }
         stage("Build"){
             steps{
