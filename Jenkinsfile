@@ -11,7 +11,9 @@ pipeline{
         stage("Static Code Analysis"){
             steps{
                 withSonarQubeEnv(credentialsId: 'Sonarcloud-Jenkins') {
-                  bat  'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Anshomyous_Desktop_App'
+                    dir("demo"){
+                        bat  'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Anshomyous_Desktop_App'
+                    }
                 }
             }
         }
