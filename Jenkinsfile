@@ -24,7 +24,7 @@ pipeline{
 		stage("App Packaging"){
             steps{
                 bat '''
-                    "C:\\Program Files (x86)\\VB6VirtualRegistry\\Vb6VirtualRegistry.exe" %-- pack "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\msix_files" "C:\ProgramData\Jenkins\.jenkins\workspace\Manual MSIX Packaging\\myjava_%BUILD_NUMBER%.msix"
+                    "C:\\Program Files (x86)\\VB6VirtualRegistry\\Vb6VirtualRegistry.exe" %-- pack "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\msix_files" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Manual MSIX Packaging\\myjava_%BUILD_NUMBER%.msix"
                     '''
             }
         }
